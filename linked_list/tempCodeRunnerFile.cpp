@@ -1,0 +1,1 @@
+Node * head = new Node(10);
