@@ -59,6 +59,8 @@
   "files.associations": {
     "iostream": "cpp",
     "new": "cpp",
-    "type_traits": "cpp"
+    "type_traits": "cpp",
+    "vector": "cpp",
+    "stack": "cpp"
   }
 }
