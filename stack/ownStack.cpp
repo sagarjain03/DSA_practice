@@ -1,80 +1,86 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-class Stack{
-    public:
+class Stack
+{
+public:
     int *arr;
     int size;
     int top;
 
-    Stack(int size){
-    arr = new int[size];
-       this->size = size;
+    Stack(int size)
+    {
+        arr = new int[size];
+        this->size = size;
 
-       top = -1;
-
+        top = -1;
     }
 
-
-    void push(int data){
-        if(top==size-1){
-            cout<<"stack overflow"<<endl;
+    void push(int data)
+    {
+        if (top == size - 1)
+        {
+            cout << "stack overflow" << endl;
         }
-        else{
+        else
+        {
             top++;
             arr[top] = data;
         }
-
     }
 
-    void pop(){
-        if(top==-1){
-            cout<<"stack underflow"<<endl;
-
+    void pop()
+    {
+        if (top == -1)
+        {
+            cout << "stack underflow" << endl;
         }
-        else{
-           top--;
+        else
+        {
+            top--;
         }
     }
 
-    bool isEmpty(){
-        if(top==-1){
+    bool isEmpty()
+    {
+        if (top == -1)
+        {
             return true;
         }
-        else{
+        else
+        {
             return false;
         }
     }
 
-    int getTop(){
-        if(top<=-1){
-            cout<<"invalid index"<<endl;
+    int getTop()
+    {
+        if (top <= -1)
+        {
+            cout << "invalid index" << endl;
             return -1;
         }
-        else{
+        else
+        {
             return arr[top];
         }
     }
 
-    void print(){
-        for(int i = 0;i<=top;i++){
-            cout<<arr[i]<<" ";
-
+    void print()
+    {
+        for (int i = 0; i <= top; i++)
+        {
+            cout << arr[i] << " ";
         }
-        cout<<endl;
+        cout << endl;
     }
-
 };
-int main(){
+
+int main()
+{
 
     Stack st(4);
-    st.print();
-    st.push(10);
-    st.print();
-    st.push(10);
-    st.print();
-    st.push(10);
-    st.print();
-    st.push(10);
-    st.print();
+    
+
+    cout<<"top element is : "<<st.getTop()<<endl;
     return 0;
 }
